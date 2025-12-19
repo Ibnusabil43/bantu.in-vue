@@ -2,13 +2,13 @@
   <div>
     
     <!-- SECTION 1: BRAND INTRO - Split Layout -->
-    <section class="min-h-[60vh] md:min-h-0 flex items-center md:py-28 bg-white overflow-hidden">
-      <div class="container-custom px-6 w-full">
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
-          
-          <!-- Visual Element -->
-          <div class="fade-in-right order-1 md:order-2 md:relative w-full flex flex-col items-center justify-center">
-            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-52 md:w-full md:max-w-none bg-black p-6 md:p-0">
+    <section class="bg-white overflow-hidden">
+      <!-- Mobile Layout -->
+      <div class="md:hidden">
+        <!-- Logo Container - Centered -->
+        <div class="h-[50vh] flex items-center justify-center px-6">
+          <div class="fade-in-right w-full max-w-xs">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-black p-6 mx-auto">
               <img 
                 src="/bantuin-logo-with-text-black.png" 
                 alt="bantu.in Logo" 
@@ -17,7 +17,7 @@
             </div>
             
             <!-- Mobile Trust Badges -->
-            <div class="flex items-center justify-center gap-3 mt-5 md:hidden">
+            <div class="flex items-center justify-center gap-3 mt-5">
               <div class="flex items-center gap-2 bg-green-50 px-3 py-1.5 rounded-full">
                 <span class="text-base">✓</span>
                 <span class="text-xs font-semibold text-green-900">Terpercaya</span>
@@ -27,69 +27,124 @@
                 <span class="text-xs font-semibold text-blue-900">Aman</span>
               </div>
             </div>
-            
-            <!-- Desktop Floating Cards -->
-            <div class="absolute -top-4 -left-4 bg-white p-4 rounded-xl shadow-lg fade-in stagger-1 hidden md:flex">
-              <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <span class="text-2xl">✓</span>
-                </div>
-                <div>
-                  <div class="font-semibold text-sm">Kualitas Terjamin</div>
-                  <div class="text-xs text-neutral-500">100% Profesional</div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg fade-in stagger-2 hidden md:flex">
-              <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <span class="text-2xl">🔒</span>
-                </div>
-                <div>
-                  <div class="font-semibold text-sm">Kerahasiaan</div>
-                  <div class="text-xs text-neutral-500">Data Aman</div>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
+        
+        <!-- Text Content -->
+        <div class="fade-in px-6 pb-12 text-center">
+          <div class="inline-block px-4 py-2 bg-black/5 rounded-full text-xs font-medium text-black mb-4">
+            ✦ Layanan Profesional
           </div>
           
-          <!-- Text Content -->
-          <div class="fade-in order-2 md:order-1 text-center md:text-left">
-            <div class="inline-block px-4 py-2 bg-black/5 rounded-full text-xs md:text-sm font-medium text-black mb-4 md:mb-6">
-              ✦ Layanan Profesional
-            </div>
+          <h1 class="text-3xl font-bold mb-4 leading-tight">
+            Wujudkan Kesuksesan
+            <span class="block text-black">Akademik & Digital Anda</span>
+          </h1>
+          
+          <p class="text-base text-neutral-600 mb-6 leading-relaxed">
+            Kami menyediakan layanan bantuan akademik dan digital yang profesional, etis, dan terpercaya. 
+            Didukung oleh tim ahli berpengalaman untuk memastikan hasil berkualitas tinggi.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <router-link
+              to="/contact"
+              class="inline-flex items-center justify-center px-6 py-3 bg-black text-white font-semibold rounded-xl hover:bg-neutral-800 transition-all duration-200 hover-lift text-sm"
+            >
+              Mulai Konsultasi
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </router-link>
             
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              Wujudkan Kesuksesan
-              <span class="block text-black">Akademik & Digital Anda</span>
-            </h1>
+            <router-link
+              to="/services"
+              class="inline-flex items-center justify-center px-6 py-3 border-2 border-neutral-200 text-black font-semibold rounded-xl hover:border-black transition-all duration-200 text-sm"
+            >
+              Lihat Layanan
+            </router-link>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Layout -->
+      <div class="hidden md:block py-28">
+        <div class="container-custom px-6">
+          <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             
-            <p class="text-base md:text-xl text-neutral-600 mb-6 md:mb-8 leading-relaxed">
-              Kami menyediakan layanan bantuan akademik dan digital yang profesional, etis, dan terpercaya. 
-              Didukung oleh tim ahli berpengalaman untuk memastikan hasil berkualitas tinggi.
-            </p>
+            <!-- Visual Element -->
+            <div class="fade-in-right order-2 relative w-full flex flex-col items-center justify-center">
+              <div class="aspect-square rounded-3xl overflow-hidden w-full bg-black">
+                <img 
+                  src="/bantuin-logo-with-text-black.png" 
+                  alt="bantu.in Logo" 
+                  class="w-full h-full object-contain"
+                />
+              </div>
             
-            <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
-              <router-link
-                to="/contact"
-                class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-black text-white font-semibold rounded-xl hover:bg-neutral-800 transition-all duration-200 hover-lift text-sm md:text-base"
-              >
-                Mulai Konsultasi
-                <svg class="w-4 h-4 md:w-5 md:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </router-link>
+              <!-- Desktop Floating Cards -->
+              <div class="absolute -top-4 -left-4 bg-white p-4 rounded-xl shadow-lg fade-in stagger-1">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <span class="text-2xl">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-sm">Kualitas Terjamin</div>
+                    <div class="text-xs text-neutral-500">100% Profesional</div>
+                  </div>
+                </div>
+              </div>
               
-              <router-link
-                to="/services"
-                class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-neutral-200 text-black font-semibold rounded-xl hover:border-black transition-all duration-200 text-sm md:text-base"
-              >
-                Lihat Layanan
-              </router-link>
+              <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg fade-in stagger-2">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span class="text-2xl">🔒</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-sm">Kerahasiaan</div>
+                    <div class="text-xs text-neutral-500">Data Aman</div>
+                  </div>
+                </div>
+              </div>
             </div>
+            
+            <!-- Text Content -->
+            <div class="fade-in order-1 text-left">
+              <div class="inline-block px-4 py-2 bg-black/5 rounded-full text-sm font-medium text-black mb-6">
+                ✦ Layanan Profesional
+              </div>
+              
+              <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Wujudkan Kesuksesan
+                <span class="block text-black">Akademik & Digital Anda</span>
+              </h1>
+              
+              <p class="text-xl text-neutral-600 mb-8 leading-relaxed">
+                Kami menyediakan layanan bantuan akademik dan digital yang profesional, etis, dan terpercaya. 
+                Didukung oleh tim ahli berpengalaman untuk memastikan hasil berkualitas tinggi.
+              </p>
+              
+              <div class="flex flex-row gap-4">
+                <router-link
+                  to="/contact"
+                  class="inline-flex items-center justify-center px-8 py-4 bg-black text-white font-semibold rounded-xl hover:bg-neutral-800 transition-all duration-200 hover-lift text-base"
+                >
+                  Mulai Konsultasi
+                  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </router-link>
+                
+                <router-link
+                  to="/services"
+                  class="inline-flex items-center justify-center px-8 py-4 border-2 border-neutral-200 text-black font-semibold rounded-xl hover:border-black transition-all duration-200 text-base"
+                >
+                  Lihat Layanan
+                </router-link>
+              </div>
+            </div>
+            
           </div>
-          
         </div>
       </div>
     </section>
