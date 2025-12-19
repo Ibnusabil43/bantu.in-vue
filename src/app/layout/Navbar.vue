@@ -1,18 +1,18 @@
 <template>
   <nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-lg border-b-2 border-neutral-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-200">
     <div class="container-custom">
-      <div class="flex justify-between items-center h-20">
+      <div class="flex justify-between items-center h-16 md:h-20">
         <!-- Logo -->
         <router-link
           to="/"
-          class="flex items-center space-x-3 group"
+          class="flex items-center space-x-2 md:space-x-3 group"
         >
           <img 
             src="/bantu.in-logo-black.png" 
             alt="bantu.in Logo"
-            class="w-12 h-12 rounded-2xl transform group-hover:scale-105 transition-transform duration-200 shadow-md border-2 border-black/5"
+            class="w-10 h-10 md:w-12 md:h-12 rounded-2xl transform group-hover:scale-105 transition-transform duration-200 shadow-md border-2 border-black/5"
           />
-          <span class="text-2xl font-bold tracking-tight text-black">bantu.in</span>
+          <span class="text-xl md:text-2xl font-bold tracking-tight text-black">bantu.in</span>
         </router-link>
 
         <!-- Desktop Navigation -->
@@ -171,7 +171,7 @@
   </nav>
 
   <!-- Spacer for fixed navbar -->
-  <div class="h-20"></div>
+  <div class="h-16 md:h-20"></div>
 </template>
 
 <script setup>
