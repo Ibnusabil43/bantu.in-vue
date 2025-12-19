@@ -1,0 +1,4 @@
+/* Additional layout utilities */
+.min-h-screen-nav {
+  min-height: calc(100vh - 5rem);
+}
