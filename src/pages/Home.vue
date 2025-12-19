@@ -4,34 +4,30 @@
     <!-- SECTION 1: BRAND INTRO - Split Layout -->
     <section class="bg-white overflow-hidden">
       <!-- Mobile Layout -->
-      <div class="md:hidden py-6">
-        <!-- Logo Container - Centered -->
-        <div class="flex flex-col items-center justify-center px-6">
-          <div class="fade-in-right w-[160px]">
-            <div class="aspect-square rounded-xl overflow-hidden bg-black p-3 mx-auto">
-              <img 
-                src="/bantuin-logo-with-text-black.png" 
-                alt="bantu.in Logo" 
-                class="w-full h-full object-contain"
-              />
-            </div>
-            
-            <!-- Mobile Trust Badges -->
-            <div class="flex items-center justify-center gap-2 mt-3">
-              <div class="flex items-center gap-1.5 bg-green-50 px-2.5 py-1 rounded-full">
-                <span class="text-sm">✓</span>
-                <span class="text-[10px] font-semibold text-green-900">Terpercaya</span>
-              </div>
-              <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full">
-                <span class="text-sm">🔒</span>
-                <span class="text-[10px] font-semibold text-blue-900">Aman</span>
-              </div>
-            </div>
+      <div class="md:hidden px-6 pt-4 pb-10">
+        <!-- Logo -->
+        <div class="w-32 h-32 mx-auto mb-3 bg-black rounded-xl p-2.5">
+          <img 
+            src="/bantuin-logo-with-text-black.png" 
+            alt="bantu.in Logo" 
+            class="w-full h-full object-contain"
+          />
+        </div>
+        
+        <!-- Trust Badges -->
+        <div class="flex items-center justify-center gap-2 mb-4">
+          <div class="flex items-center gap-1.5 bg-green-50 px-2.5 py-1 rounded-full">
+            <span class="text-sm">✓</span>
+            <span class="text-[10px] font-semibold text-green-900">Terpercaya</span>
+          </div>
+          <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full">
+            <span class="text-sm">🔒</span>
+            <span class="text-[10px] font-semibold text-blue-900">Aman</span>
           </div>
         </div>
         
         <!-- Text Content -->
-        <div class="fade-in px-6 pb-12 text-center">
+        <div class="text-center">
           <div class="inline-block px-4 py-2 bg-black/5 rounded-full text-xs font-medium text-black mb-4">
             ✦ Layanan Profesional
           </div>
