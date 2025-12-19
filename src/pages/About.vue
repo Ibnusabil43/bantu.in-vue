@@ -10,7 +10,7 @@
           </div>
           <h1 class="text-4xl md:text-5xl font-bold mb-6">
             Mitra Terpercaya untuk
-            <span class="block text-neutral-600">Kesuksesan Anda</span>
+            <span class="block text-black">Kesuksesan Anda</span>
           </h1>
           <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
             bantu.in adalah platform layanan profesional yang mengutamakan kualitas, 

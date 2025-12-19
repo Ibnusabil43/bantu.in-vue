@@ -10,7 +10,7 @@
           </div>
           <h1 class="text-4xl md:text-5xl font-bold mb-6">
             Solusi Lengkap untuk
-            <span class="block text-neutral-600">Kebutuhan Anda</span>
+            <span class="block text-black">Kebutuhan Anda</span>
           </h1>
           <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
             Layanan akademik dan digital dengan pendekatan profesional, etis, dan hasil berkualitas tinggi
@@ -52,7 +52,7 @@
                 </div>
                 <svg 
                   class="w-6 h-6 text-neutral-400 transition-transform duration-200" 
-                  :class="{ 'rotate-180': expandedService === 1 }"
+                  :class="{ 'rotate-180': expandedService.includes(1) }"
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -61,7 +61,7 @@
                 </svg>
               </button>
               
-              <div v-if="expandedService === 1" class="px-8 pb-8 bg-neutral-50 border-t border-neutral-200">
+              <div v-if="expandedService.includes(1)" class="px-8 pb-8 bg-neutral-50 border-t border-neutral-200">
                 <div class="grid md:grid-cols-2 gap-8 pt-8">
                   <div>
                     <h4 class="font-bold text-lg mb-4">Masalah yang Diselesaikan</h4>
@@ -138,7 +138,7 @@
                 </div>
                 <svg 
                   class="w-6 h-6 text-neutral-400 transition-transform duration-200" 
-                  :class="{ 'rotate-180': expandedService === 2 }"
+                  :class="{ 'rotate-180': expandedService.includes(2) }"
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -147,7 +147,7 @@
                 </svg>
               </button>
               
-              <div v-if="expandedService === 2" class="px-8 pb-8 bg-neutral-50 border-t border-neutral-200">
+              <div v-if="expandedService.includes(2)" class="px-8 pb-8 bg-neutral-50 border-t border-neutral-200">
                 <div class="grid md:grid-cols-2 gap-8 pt-8">
                   <div>
                     <h4 class="font-bold text-lg mb-4">Masalah yang Diselesaikan</h4>
@@ -224,7 +224,7 @@
                 </div>
                 <svg 
                   class="w-6 h-6 text-neutral-400 transition-transform duration-200" 
-                  :class="{ 'rotate-180': expandedService === 3 }"
+                  :class="{ 'rotate-180': expandedService.includes(3) }"
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -233,7 +233,7 @@
                 </svg>
               </button>
               
-              <div v-if="expandedService === 3" class="px-8 pb-8 bg-neutral-50 border-t border-neutral-200">
+              <div v-if="expandedService.includes(3)" class="px-8 pb-8 bg-neutral-50 border-t border-neutral-200">
                 <div class="grid md:grid-cols-2 gap-8 pt-8">
                   <div>
                     <h4 class="font-bold text-lg mb-4">Masalah yang Diselesaikan</h4>
@@ -304,7 +304,7 @@
                 </div>
                 <svg 
                   class="w-6 h-6 text-neutral-400 transition-transform duration-200" 
-                  :class="{ 'rotate-180': expandedService === 4 }"
+                  :class="{ 'rotate-180': expandedService.includes(4) }"
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -313,7 +313,7 @@
                 </svg>
               </button>
               
-              <div v-if="expandedService === 4" class="px-8 pb-8 bg-neutral-50 border-t border-neutral-200">
+              <div v-if="expandedService.includes(4)" class="px-8 pb-8 bg-neutral-50 border-t border-neutral-200">
                 <div class="grid md:grid-cols-2 gap-8 pt-8">
                   <div>
                     <h4 class="font-bold text-lg mb-4">Masalah yang Diselesaikan</h4>
@@ -472,10 +472,17 @@
 <script setup>
 import { ref } from 'vue'
 
-// Expandable service state
-const expandedService = ref(null)
+// Expandable service state - now supports multiple expanded cards
+const expandedService = ref([])
 
 const toggleService = (serviceId) => {
-  expandedService.value = expandedService.value === serviceId ? null : serviceId
+  const index = expandedService.value.indexOf(serviceId)
+  if (index > -1) {
+    // Card is already expanded, so collapse it
+    expandedService.value.splice(index, 1)
+  } else {
+    // Card is collapsed, so expand it
+    expandedService.value.push(serviceId)
+  }
 }
 </script>

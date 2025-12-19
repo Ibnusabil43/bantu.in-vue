@@ -220,7 +220,7 @@
 
               <!-- Alternative Contact -->
               <div class="mt-8 p-6 rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 text-white">
-                <h4 class="font-semibold mb-4">Lebih Suka Kontak Langsung?</h4>
+                <h4 class="font-semibold text-white mb-4">Lebih Suka Kontak Langsung?</h4>
                 <div class="space-y-3">
                   <a href="mailto:contact@bantu.in" class="flex items-center gap-3 text-neutral-200 hover:text-white transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -299,7 +299,7 @@
     <section class="py-20 bg-neutral-900 text-white">
       <div class="container mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center fade-in">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
             Langkah Pertama Dimulai Dari Sini
           </h2>
           <p class="text-lg text-neutral-300 mb-10">

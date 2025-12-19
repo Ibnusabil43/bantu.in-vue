@@ -7,14 +7,14 @@
         <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           
           <!-- Text Content -->
-          <div class="fade-in">
+          <div class="fade-in order-2 md:order-1">
             <div class="inline-block px-4 py-2 bg-black/5 rounded-full text-sm font-medium text-black mb-6">
               ✦ Layanan Profesional
             </div>
             
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Wujudkan Kesuksesan
-              <span class="block text-neutral-600">Akademik & Digital Anda</span>
+              <span class="block text-black">Akademik & Digital Anda</span>
             </h1>
             
             <p class="text-lg md:text-xl text-neutral-600 mb-8 leading-relaxed">
@@ -43,7 +43,7 @@
           </div>
           
           <!-- Visual Element -->
-          <div class="relative fade-in-right">
+          <div class="relative fade-in-right order-1 md:order-2">
             <div class="aspect-square rounded-3xl overflow-hidden">
               <img 
                 src="/bantuin-logo-with-text-black.png" 
@@ -366,7 +366,7 @@
             </div>
             
             <!-- Value Commitments -->
-            <div class="grid grid-cols-3 gap-8 pt-8 border-t border-neutral-200">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-neutral-200">
               <div>
                 <div class="text-2xl font-bold text-black mb-1">Kualitas</div>
                 <div class="text-sm text-neutral-600">Standar Tinggi</div>
