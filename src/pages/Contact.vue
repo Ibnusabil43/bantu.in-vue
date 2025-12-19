@@ -105,7 +105,7 @@
                   </li>
                   <li class="flex items-start gap-2">
                     <span class="font-semibold text-neutral-900 flex-shrink-0">4.</span>
-                    <span>Tidak ada tekanan—Anda memutuskan kapan dan apakah ingin melanjutkan</span>
+                    <span>Tidak ada tekanan, Anda memutuskan kapan dan apakah ingin melanjutkan</span>
                   </li>
                 </ol>
               </div>

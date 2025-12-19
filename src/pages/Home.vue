@@ -6,7 +6,7 @@
       <!-- Mobile Layout -->
       <div class="md:hidden px-6 pt-4 pb-10">
         <!-- Logo -->
-        <div class="w-32 h-32 mx-auto mb-3 bg-black rounded-xl p-2.5">
+        <div class="w-44 h-44 mx-auto mb-3 bg-black rounded-xl p-3">
           <img 
             src="/bantuin-logo-with-text-black.png" 
             alt="bantu.in Logo" 
