@@ -2,13 +2,13 @@
   <div>
     
     <!-- SECTION 1: BRAND INTRO - Split Layout -->
-    <section class="py-8 md:py-28 bg-white overflow-hidden">
+    <section class="pt-4 pb-8 md:py-28 bg-white overflow-hidden">
       <div class="container-custom px-6">
-        <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
           
           <!-- Visual Element -->
-          <div class="fade-in-right order-1 md:order-2 md:relative w-full flex flex-col items-center justify-center">
-            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-56 md:w-full md:max-w-none bg-black p-6 md:p-0">
+          <div class="fade-in-right order-1 md:order-2 md:relative w-full flex flex-col items-center justify-start">
+            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-56 max-w-[70vw] md:w-full md:max-w-none bg-black p-6 md:p-0">
               <img 
                 src="/bantuin-logo-with-text-black.png" 
                 alt="bantu.in Logo" 
