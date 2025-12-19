@@ -2,13 +2,13 @@
   <div>
     
     <!-- SECTION 1: BRAND INTRO - Split Layout -->
-    <section class="pt-4 pb-8 md:py-28 bg-white overflow-hidden">
-      <div class="container-custom px-6">
+    <section class="min-h-[60vh] md:min-h-0 flex items-center md:py-28 bg-white overflow-hidden">
+      <div class="container-custom px-6 w-full">
         <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
           
           <!-- Visual Element -->
-          <div class="fade-in-right order-1 md:order-2 md:relative w-full flex flex-col items-center justify-start">
-            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-56 max-w-[70vw] md:w-full md:max-w-none bg-black p-6 md:p-0">
+          <div class="fade-in-right order-1 md:order-2 md:relative w-full flex flex-col items-center justify-center">
+            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-52 md:w-full md:max-w-none bg-black p-6 md:p-0">
               <img 
                 src="/bantuin-logo-with-text-black.png" 
                 alt="bantu.in Logo" 
@@ -17,7 +17,7 @@
             </div>
             
             <!-- Mobile Trust Badges -->
-            <div class="flex items-center justify-center gap-3 mt-4 md:hidden">
+            <div class="flex items-center justify-center gap-3 mt-5 md:hidden">
               <div class="flex items-center gap-2 bg-green-50 px-3 py-1.5 rounded-full">
                 <span class="text-base">✓</span>
                 <span class="text-xs font-semibold text-green-900">Terpercaya</span>
