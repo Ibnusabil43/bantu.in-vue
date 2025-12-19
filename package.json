@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Layanan bantuan akademik dan digital profesional yang mengutamakan kualitas, etika akademik, dan kerahasiaan klien",
+  "homepage": "https://bantu-in.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ibnusabil43/bantu.in-vue.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
