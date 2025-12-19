@@ -26,25 +26,4 @@ bantu.in adalah platform yang menyediakan layanan bantuan akademik dan digital b
 - GSAP
 - Vue Router
 
-## 📦 Instalasi
-
-1. Clone repository
-```bash
-git clone https://github.com/yourusername/bantu.in-vue.js.git
-cd bantu.in-vue.js
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Jalankan development server
-```bash
-npm run dev
-```
-
-4. Build untuk production
-```bash
-npm run build
 
