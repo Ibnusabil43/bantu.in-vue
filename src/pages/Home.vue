@@ -4,11 +4,11 @@
     <!-- SECTION 1: BRAND INTRO - Split Layout -->
     <section class="bg-white overflow-hidden">
       <!-- Mobile Layout -->
-      <div class="md:hidden">
+      <div class="md:hidden py-6">
         <!-- Logo Container - Centered -->
-        <div class="h-[35vh] flex items-center justify-center px-6 pt-4">
-          <div class="fade-in-right w-full max-w-[200px]">
-            <div class="aspect-square rounded-2xl overflow-hidden bg-black p-4 mx-auto">
+        <div class="flex flex-col items-center justify-center px-6">
+          <div class="fade-in-right w-[160px]">
+            <div class="aspect-square rounded-xl overflow-hidden bg-black p-3 mx-auto">
               <img 
                 src="/bantuin-logo-with-text-black.png" 
                 alt="bantu.in Logo" 
@@ -17,14 +17,14 @@
             </div>
             
             <!-- Mobile Trust Badges -->
-            <div class="flex items-center justify-center gap-3 mt-4">
-              <div class="flex items-center gap-2 bg-green-50 px-3 py-1.5 rounded-full">
-                <span class="text-base">✓</span>
-                <span class="text-xs font-semibold text-green-900">Terpercaya</span>
+            <div class="flex items-center justify-center gap-2 mt-3">
+              <div class="flex items-center gap-1.5 bg-green-50 px-2.5 py-1 rounded-full">
+                <span class="text-sm">✓</span>
+                <span class="text-[10px] font-semibold text-green-900">Terpercaya</span>
               </div>
-              <div class="flex items-center gap-2 bg-blue-50 px-3 py-1.5 rounded-full">
-                <span class="text-base">🔒</span>
-                <span class="text-xs font-semibold text-blue-900">Aman</span>
+              <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full">
+                <span class="text-sm">🔒</span>
+                <span class="text-[10px] font-semibold text-blue-900">Aman</span>
               </div>
             </div>
           </div>
