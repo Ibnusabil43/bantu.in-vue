@@ -2,13 +2,13 @@
   <div>
     
     <!-- SECTION 1: BRAND INTRO - Split Layout -->
-    <section class="py-12 md:py-28 bg-white overflow-hidden">
+    <section class="py-8 md:py-28 bg-white overflow-hidden">
       <div class="container-custom px-6">
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center max-w-7xl mx-auto">
           
           <!-- Visual Element -->
-          <div class="relative fade-in-right order-1 md:order-2 w-full flex flex-col items-center justify-center">
-            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-48 md:w-full md:max-w-none bg-black p-4 md:p-0">
+          <div class="fade-in-right order-1 md:order-2 md:relative w-full flex flex-col items-center">
+            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-44 md:w-full md:max-w-none bg-black p-4 md:p-0">
               <img 
                 src="/bantuin-logo-with-text-black.png" 
                 alt="bantu.in Logo" 
@@ -17,13 +17,13 @@
             </div>
             
             <!-- Mobile Trust Badges -->
-            <div class="flex items-center justify-center gap-4 mt-6 md:hidden">
-              <div class="flex items-center gap-2 bg-green-50 px-4 py-2 rounded-full">
-                <span class="text-lg">✓</span>
+            <div class="flex items-center justify-center gap-3 mt-4 md:hidden">
+              <div class="flex items-center gap-2 bg-green-50 px-3 py-1.5 rounded-full">
+                <span class="text-base">✓</span>
                 <span class="text-xs font-semibold text-green-900">Terpercaya</span>
               </div>
-              <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
-                <span class="text-lg">🔒</span>
+              <div class="flex items-center gap-2 bg-blue-50 px-3 py-1.5 rounded-full">
+                <span class="text-base">🔒</span>
                 <span class="text-xs font-semibold text-blue-900">Aman</span>
               </div>
             </div>
