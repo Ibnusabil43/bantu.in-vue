@@ -6,9 +6,9 @@
       <!-- Mobile Layout -->
       <div class="md:hidden">
         <!-- Logo Container - Centered -->
-        <div class="h-[50vh] flex items-center justify-center px-6">
-          <div class="fade-in-right w-full max-w-xs">
-            <div class="aspect-square rounded-2xl overflow-hidden bg-black p-6 mx-auto">
+        <div class="h-[35vh] flex items-center justify-center px-6 pt-4">
+          <div class="fade-in-right w-full max-w-[200px]">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-black p-4 mx-auto">
               <img 
                 src="/bantuin-logo-with-text-black.png" 
                 alt="bantu.in Logo" 
@@ -17,7 +17,7 @@
             </div>
             
             <!-- Mobile Trust Badges -->
-            <div class="flex items-center justify-center gap-3 mt-5">
+            <div class="flex items-center justify-center gap-3 mt-4">
               <div class="flex items-center gap-2 bg-green-50 px-3 py-1.5 rounded-full">
                 <span class="text-base">✓</span>
                 <span class="text-xs font-semibold text-green-900">Terpercaya</span>
