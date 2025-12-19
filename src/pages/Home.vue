@@ -7,8 +7,8 @@
         <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center max-w-7xl mx-auto">
           
           <!-- Visual Element -->
-          <div class="fade-in-right order-1 md:order-2 md:relative w-full flex flex-col items-center">
-            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-44 md:w-full md:max-w-none bg-black p-4 md:p-0">
+          <div class="fade-in-right order-1 md:order-2 md:relative w-full flex flex-col items-center justify-center">
+            <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden w-56 md:w-full md:max-w-none bg-black p-6 md:p-0">
               <img 
                 src="/bantuin-logo-with-text-black.png" 
                 alt="bantu.in Logo" 
