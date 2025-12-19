@@ -1,29 +1,36 @@
 <template>
-  <section class="py-24 section-dark">
-    <div ref="ctaRef" class="container-custom text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
-        Siap Memulai Proyek Anda?
-      </h2>
-      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-        Konsultasikan kebutuhan Anda dengan tim profesional kami dan dapatkan solusi terbaik
+  <!-- CTA SECTION - Minimal, calm, clear action -->
+  <section class="section-spacing section-dark-soft">
+    <div class="container-narrow text-center">
+      
+      <!-- Simple, restrained heading -->
+      <h2 class="mb-4 text-white">Mulai Konsultasi</h2>
+      
+      <!-- Clear value proposition -->
+      <p class="text-neutral-300 max-w-xl mx-auto mb-10 text-lg">
+        Diskusikan kebutuhan Anda dengan tim kami dan dapatkan solusi terbaik untuk proyek Anda
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Button variant="primary-light" tag="router-link" to="/contact">
-          Hubungi Kami Sekarang
-        </Button>
-        <Button variant="outline-light" tag="router-link" to="/services">
-          Pelajari Lebih Lanjut
-        </Button>
+
+      <!-- Single, clear CTA -->
+      <div>
+        <router-link
+          to="/contact"
+          class="inline-flex items-center px-8 py-4 bg-white text-black font-semibold text-sm rounded-lg hover:bg-neutral-100 transition-all duration-150 hover-lift"
+        >
+          Hubungi Kami
+          <span class="ml-2">→</span>
+        </router-link>
       </div>
+
+      <!-- Trust indicator -->
+      <p class="mt-8 text-neutral-400 text-sm">
+        Konsultasi gratis • Respons cepat • Kerahasiaan terjamin
+      </p>
+
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import Button from '../components/Button.vue'
-import { useScrollReveal } from '../composables/useScrollReveal'
-
-const ctaRef = ref(null)
-useScrollReveal(ctaRef, { animationClass: 'animate-fade-in' })
+// Minimal CTA section - no complex animations needed
 </script>

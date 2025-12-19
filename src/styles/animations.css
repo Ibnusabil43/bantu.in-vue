@@ -1,5 +1,20 @@
-/* Fast, professional animations - 200-400ms range */
-@keyframes fade-in-up {
+/* ====================================================
+   ANIMATION SYSTEM - Alive but Restrained
+   ==================================================== */
+
+/* FADE-IN ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -10,30 +25,10 @@
   }
 }
 
-@keyframes fade-in {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-12px);
   }
   to {
     opacity: 1;
@@ -41,10 +36,10 @@
   }
 }
 
-@keyframes slide-in-right {
+@keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(12px);
   }
   to {
     opacity: 1;
@@ -52,77 +47,87 @@
   }
 }
 
-/* Animation classes with optimal durations */
-.animate-fade-in-up {
-  animation: fade-in-up 0.4s ease-out forwards;
+/* UTILITY CLASSES */
+.fade-in {
+  animation: fadeIn 300ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.animate-fade-in {
-  animation: fade-in 0.3s ease-out forwards;
+.fade-in-up {
+  animation: fadeInUp 350ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.animate-scale-in {
-  animation: scale-in 0.3s ease-out forwards;
+.fade-in-left {
+  animation: fadeInLeft 300ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.animate-slide-in-left {
-  animation: slide-in-left 0.4s ease-out forwards;
+.fade-in-right {
+  animation: fadeInRight 300ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.animate-slide-in-right {
-  animation: slide-in-right 0.4s ease-out forwards;
-}
+/* STAGGER DELAYS */
+.stagger-1 { animation-delay: 100ms; }
+.stagger-2 { animation-delay: 200ms; }
+.stagger-3 { animation-delay: 300ms; }
+.stagger-4 { animation-delay: 400ms; }
+.stagger-5 { animation-delay: 500ms; }
 
-/* Stagger animation delays - shorter for speed */
-.delay-50 {
-  animation-delay: 50ms;
-}
-
-.delay-100 {
-  animation-delay: 100ms;
-}
-
-.delay-150 {
-  animation-delay: 150ms;
-}
-
-.delay-200 {
-  animation-delay: 200ms;
-}
-
-.delay-250 {
-  animation-delay: 250ms;
-}
-
-.delay-300 {
-  animation-delay: 300ms;
-}
-
-/* Hover effects - subtle and fast */
+/* HOVER EFFECTS - Subtle & Professional */
 .hover-lift {
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 .hover-scale {
-  transition: transform 0.2s ease-out;
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-scale:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.hover-border {
+  transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-border:hover {
+  border-color: var(--color-accent);
+}
+
+/* BUTTON TRANSITIONS */
+.btn-transition {
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-transition:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* CARD ANIMATIONS */
+.card-hover {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* SMOOTH REVEAL ON SCROLL */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

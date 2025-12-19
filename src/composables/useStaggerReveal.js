@@ -5,11 +5,11 @@ export function useStaggerReveal(containerRef, options = {}) {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   
   const defaultOptions = {
-    threshold: 0.1,
+    threshold: 0.15,
     childSelector: '.stagger-item',
-    stagger: 0.08,  // Faster stagger
-    duration: 0.3,  // Shorter duration
-    y: 20,          // Smaller movement
+    stagger: 0.05,  // Faster stagger - 50ms
+    duration: 0.3,  // 300ms duration
+    y: 10,          // Smaller movement - 10px
     ...options
   }
 

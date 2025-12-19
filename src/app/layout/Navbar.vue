@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm transition-shadow duration-200">
+  <nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-lg border-b-2 border-neutral-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-200">
     <div class="container-custom">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
@@ -10,44 +10,72 @@
           <img 
             src="/bantu.in-logo-black.png" 
             alt="bantu.in Logo"
-            class="w-12 h-12 rounded-2xl transform group-hover:scale-105 transition-transform duration-200 shadow-sm"
+            class="w-12 h-12 rounded-2xl transform group-hover:scale-105 transition-transform duration-200 shadow-md border-2 border-black/5"
           />
           <span class="text-2xl font-bold tracking-tight text-black">bantu.in</span>
         </router-link>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
+        <div class="hidden md:flex items-center space-x-2">
           <router-link
             to="/"
-            class="text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/', 'text-gray-500': $route.path !== '/' }"
+            class="px-5 py-2.5 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200 relative"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/' 
+            }"
           >
-            Beranda
+            <span class="relative z-10">Beranda</span>
+            <span 
+              v-if="$route.path === '/'" 
+              class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-black rounded-full"
+            ></span>
           </router-link>
           <router-link
             to="/tentang-kami"
-            class="text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/tentang-kami', 'text-gray-500': $route.path !== '/tentang-kami' }"
+            class="px-5 py-2.5 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200 relative"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/tentang-kami', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/tentang-kami' 
+            }"
           >
-            Tentang Kami
+            <span class="relative z-10">Tentang Kami</span>
+            <span 
+              v-if="$route.path === '/tentang-kami'" 
+              class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-black rounded-full"
+            ></span>
           </router-link>
           <router-link
             to="/services"
-            class="text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/services', 'text-gray-500': $route.path !== '/services' }"
+            class="px-5 py-2.5 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200 relative"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/services', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/services' 
+            }"
           >
-            Layanan
+            <span class="relative z-10">Layanan</span>
+            <span 
+              v-if="$route.path === '/services'" 
+              class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-black rounded-full"
+            ></span>
           </router-link>
           <router-link
             to="/alur-kerja"
-            class="text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/alur-kerja', 'text-gray-500': $route.path !== '/alur-kerja' }"
+            class="px-5 py-2.5 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200 relative"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/alur-kerja', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/alur-kerja' 
+            }"
           >
-            Alur Kerja
+            <span class="relative z-10">Alur Kerja</span>
+            <span 
+              v-if="$route.path === '/alur-kerja'" 
+              class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-black rounded-full"
+            ></span>
           </router-link>
           <router-link
             to="/contact"
-            class="px-6 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+            class="ml-4 px-6 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-neutral-800 transition-all duration-150 shadow-sm hover-lift"
           >
             Hubungi Kami
           </router-link>
@@ -56,22 +84,20 @@
         <!-- Mobile Menu Button -->
         <button
           @click="mobileMenuOpen = !mobileMenuOpen"
-          class="md:hidden text-black p-2 focus:outline-none"
+          class="md:hidden text-black p-2.5 rounded-lg hover:bg-neutral-100 transition-colors duration-200 focus:outline-none border-2 border-transparent hover:border-neutral-200"
           aria-label="Toggle mobile menu"
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
             <path
               v-if="!mobileMenuOpen"
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
             <path
               v-else
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
               d="M6 18L18 6M6 6l12 12"
             />
           </svg>
@@ -81,46 +107,61 @@
       <!-- Mobile Navigation -->
       <div
         v-show="mobileMenuOpen"
-        class="md:hidden border-t border-gray-200 bg-white"
+        class="md:hidden border-t-2 border-neutral-200 bg-white"
       >
-        <div class="container-custom py-4 space-y-4">
+        <div class="py-5 space-y-1.5">
           <router-link
             to="/"
             @click="mobileMenuOpen = false"
-            class="block text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/', 'text-gray-500': $route.path !== '/' }"
+            class="block px-5 py-3 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/' 
+            }"
           >
             Beranda
           </router-link>
           <router-link
             to="/tentang-kami"
             @click="mobileMenuOpen = false"
-            class="block text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/tentang-kami', 'text-gray-500': $route.path !== '/tentang-kami' }"
+            class="block px-5 py-3 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/tentang-kami', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/tentang-kami' 
+            }"
           >
             Tentang Kami
           </router-link>
           <router-link
             to="/services"
             @click="mobileMenuOpen = false"
-            class="block text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/services', 'text-gray-500': $route.path !== '/services' }"
+            class="block px-5 py-3 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/services', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/services' 
+            }"
           >
             Layanan
           </router-link>
           <router-link
             to="/alur-kerja"
             @click="mobileMenuOpen = false"
-            class="block text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/alur-kerja', 'text-gray-500': $route.path !== '/alur-kerja' }"
+            class="block px-5 py-3 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/alur-kerja', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/alur-kerja' 
+            }"
           >
             Alur Kerja
           </router-link>
           <router-link
             to="/contact"
             @click="mobileMenuOpen = false"
-            class="block text-sm font-medium hover:text-gray-600 transition-colors"
-            :class="{ 'text-black': $route.path === '/contact', 'text-gray-500': $route.path !== '/contact' }"
+            class="block px-5 py-3 text-[0.9375rem] font-semibold rounded-lg transition-all duration-200"
+            :class="{ 
+              'text-black bg-neutral-100': $route.path === '/contact', 
+              'text-neutral-600 hover:text-black hover:bg-neutral-50': $route.path !== '/contact' 
+            }"
           >
             Hubungi Kami
           </router-link>

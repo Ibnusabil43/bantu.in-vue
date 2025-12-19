@@ -1,47 +1,61 @@
 <template>
-  <section class="min-h-screen flex items-center justify-center section-dark">
-    <div class="container-custom text-center py-20">
-      <!-- Logo -->
-      <div ref="logoRef" class="flex justify-center mb-8 opacity-0">
-        <img 
-          src="/bantu.in-logo-white.png" 
-          alt="bantu.in Logo"
-          class="w-24 h-24 rounded-2xl shadow-2xl"
-        />
-      </div>
+  <!-- INTRO SECTION - Editorial split layout, NOT a hero -->
+  <section class="section-spacing section-white relative">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Content -->
+        <div ref="contentRef" class="opacity-0">
+          <!-- Logo - subtle presence -->
+          <div class="mb-8">
+            <img 
+              src="/bantu.in-logo-white.png" 
+              alt="bantu.in"
+              class="w-16 h-16 rounded-2xl border border-neutral-200"
+            />
+          </div>
 
-      <!-- Headline -->
-      <div ref="headlineRef" class="opacity-0">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
-          Solusi Profesional untuk<br />
-          <span class="text-gray-300">Kebutuhan Akademik Anda</span>
-        </h1>
-      </div>
+          <!-- Restrained heading - max 60% viewport width enforced -->
+          <h1 class="mb-6">
+            Solusi Profesional untuk Kebutuhan Akademik dan Digital Anda
+          </h1>
 
-      <!-- Subheadline -->
-      <p ref="subheadlineRef" class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed opacity-0">
-        Layanan bantuan akademik dan digital yang mengutamakan kualitas, etika, dan kerahasiaan
-      </p>
+          <!-- Lead text - comfortable reading -->
+          <p class="lead-text mb-8">
+            bantu.in adalah platform layanan akademik dan digital yang mengutamakan 
+            kualitas, etika, dan kerahasiaan dalam setiap pengerjaan.
+          </p>
 
-      <!-- Description -->
-      <p ref="descriptionRef" class="text-base md:text-lg text-white/90 mb-12 max-w-2xl mx-auto opacity-0">
-        bantu.in hadir sebagai mitra terpercaya untuk mendampingi Anda dalam menyelesaikan berbagai kebutuhan akademik dan digital dengan pendekatan profesional dan beretika.
-      </p>
+          <!-- Inline CTAs - proportional, not dominant -->
+          <div class="flex flex-col sm:flex-row gap-4 items-start">
+            <router-link
+              to="/contact"
+              class="inline-flex items-center px-6 py-3 bg-black text-white font-semibold text-sm rounded-lg hover:bg-neutral-800 transition-all duration-150 hover-lift"
+            >
+              Konsultasi Gratis
+            </router-link>
+            <router-link
+              to="/services"
+              class="inline-flex items-center px-6 py-3 border-2 border-neutral-300 text-black font-semibold text-sm rounded-lg hover:border-black transition-all duration-150"
+            >
+              Lihat Layanan
+              <span class="ml-2">→</span>
+            </router-link>
+          </div>
+        </div>
 
-      <!-- CTA Buttons -->
-      <div ref="ctaRef" class="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0">
-        <router-link
-          to="/contact"
-          class="w-full sm:w-auto px-12 py-4 bg-white text-black font-semibold text-center rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
-        >
-          Konsultasi Sekarang
-        </router-link>
-        <router-link
-          to="/services"
-          class="w-full sm:w-auto px-12 py-4 bg-transparent border-2 border-white text-white font-semibold text-center rounded-lg hover:bg-white hover:text-black transition-all duration-300"
-        >
-          Lihat Layanan Kami
-        </router-link>
+        <!-- Right: Visual placeholder -->
+        <div ref="visualRef" class="opacity-0 bg-neutral-100 rounded-2xl aspect-square lg:aspect-auto lg:h-96 flex items-center justify-center">
+          <div class="text-center p-8">
+            <div class="w-20 h-20 mx-auto mb-4 bg-neutral-200 rounded-full flex items-center justify-center">
+              <span class="text-4xl">📚</span>
+            </div>
+            <p class="text-secondary text-sm max-w-xs mx-auto">
+              Visual representation area for professional service illustration
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -51,49 +65,27 @@
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+const contentRef = ref(null)
+const visualRef = ref(null)
 
-const logoRef = ref(null)
-const headlineRef = ref(null)
-const subheadlineRef = ref(null)
-const descriptionRef = ref(null)
-const ctaRef = ref(null)
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 onMounted(() => {
   if (prefersReducedMotion) {
-    // Show all elements immediately if reduced motion is preferred
-    gsap.set([logoRef.value, headlineRef.value, subheadlineRef.value, descriptionRef.value, ctaRef.value], { opacity: 1 })
+    gsap.set([contentRef.value, visualRef.value], { opacity: 1 })
     return
   }
 
-  // Faster, more subtle animations
-  const timeline = gsap.timeline({ defaults: { ease: 'power2.out' } })
-
-  timeline
-    .to(logoRef.value, {
+  gsap.timeline()
+    .to(contentRef.value, {
       opacity: 1,
-      scale: 1,
-      duration: 0.4,
+      duration: 0.2,
+      ease: 'power2.out'
     })
-    .to(headlineRef.value, {
+    .to(visualRef.value, {
       opacity: 1,
-      y: 0,
-      duration: 0.4,
-    }, '-=0.2')
-    .to(subheadlineRef.value, {
-      opacity: 1,
-      y: 0,
-      duration: 0.3,
-    }, '-=0.2')
-    .to(descriptionRef.value, {
-      opacity: 1,
-      y: 0,
-      duration: 0.3,
-    }, '-=0.15')
-    .to(ctaRef.value, {
-      opacity: 1,
-      y: 0,
-      duration: 0.3,
-    }, '-=0.15')
+      duration: 0.18,
+      ease: 'power2.out'
+    }, '-=0.1')
 })
 </script>

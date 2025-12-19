@@ -1,84 +1,108 @@
 <template>
-  <section class="py-24 section-light">
+  <!-- SERVICES SECTION - Editorial style, description-first -->
+  <section class="section-spacing section-white">
     <div class="container-custom">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black">Layanan Kami</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-          Solusi lengkap untuk berbagai kebutuhan akademik dan digital Anda
+      
+      <!-- Section header -->
+      <div class="mb-16">
+        <h2 class="mb-4">Layanan Kami</h2>
+        <p class="text-secondary max-w-2xl">
+          Solusi lengkap untuk berbagai kebutuhan akademik dan digital dengan pendekatan profesional
         </p>
       </div>
 
-      <div ref="servicesRef" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <!-- Services list - editorial layout -->
+      <div ref="servicesRef" class="space-y-16">
+        
         <!-- Academic Services -->
-        <Card class="stagger-item group">
-          <h3 class="text-2xl font-bold mb-6 text-black">Bantuan Akademik</h3>
-          <ul class="space-y-4 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-black mr-3 text-lg font-bold">•</span>
-              <span>Pendampingan Skripsi & Tesis</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 text-lg font-bold">•</span>
-              <span>Bantuan Penulisan Makalah</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 text-lg font-bold">•</span>
-              <span>Tugas Besar & Proyek Kuliah</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 text-lg font-bold">•</span>
-              <span>Literature Review</span>
-            </li>
-          </ul>
-          <router-link
-            to="/services"
-            class="inline-block mt-8 text-black font-semibold hover:text-gray-600 transition-colors"
-          >
-            Selengkapnya →
-          </router-link>
-        </Card>
+        <div class="stagger-item grid grid-cols-1 lg:grid-cols-12 gap-8 pb-16 border-b border-neutral-200">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 bg-neutral-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-lg">📚</span>
+              </div>
+              <h3 class="text-black">Bantuan Akademik</h3>
+            </div>
+            <p class="text-secondary">
+              Pendampingan profesional untuk berbagai kebutuhan akademik Anda
+            </p>
+          </div>
+          
+          <div class="lg:col-span-8">
+            <dl class="space-y-6">
+              <div>
+                <dt class="font-semibold text-black mb-2">Pendampingan Skripsi & Tesis</dt>
+                <dd class="text-secondary">Bantuan komprehensif dari perencanaan hingga finalisasi penelitian akademik Anda dengan metodologi yang tepat</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-black mb-2">Penulisan Makalah</dt>
+                <dd class="text-secondary">Penyusunan makalah akademik dengan struktur yang sistematis dan referensi yang kredibel</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-black mb-2">Tugas Besar & Proyek</dt>
+                <dd class="text-secondary">Pengerjaan tugas kuliah dan proyek dengan standar kualitas tinggi</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-black mb-2">Literature Review</dt>
+                <dd class="text-secondary">Tinjauan pustaka mendalam dengan analisis kritis terhadap sumber-sumber terkini</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
 
         <!-- Digital Services -->
-        <Card class="stagger-item group">
-          <h3 class="text-2xl font-bold mb-6 text-black">Layanan Digital</h3>
-          <ul class="space-y-4 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-black mr-3 text-lg font-bold">•</span>
-              <span>Bantuan Review Google Maps</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 text-lg font-bold">•</span>
-              <span>Peningkatan Watch Time</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 text-lg font-bold">•</span>
-              <span>Engagement Media Sosial</span>
-            </li>
-          </ul>
-          <router-link
-            to="/services"
-            class="inline-block mt-8 text-black font-semibold hover:text-gray-600 transition-colors"
-          >
-            Selengkapnya →
-          </router-link>
-        </Card>
+        <div class="stagger-item grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 bg-neutral-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-lg">💻</span>
+              </div>
+              <h3 class="text-black">Layanan Digital</h3>
+            </div>
+            <p class="text-secondary">
+              Solusi digital untuk meningkatkan kehadiran dan engagement online Anda
+            </p>
+          </div>
+          
+          <div class="lg:col-span-8">
+            <dl class="space-y-6">
+              <div>
+                <dt class="font-semibold text-black mb-2">Review Google Maps</dt>
+                <dd class="text-secondary">Peningkatan kredibilitas bisnis melalui review Google Maps yang autentik dan berkualitas</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-black mb-2">Peningkatan Watch Time</dt>
+                <dd class="text-secondary">Optimasi konten video untuk meningkatkan durasi tontonan dan engagement</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-black mb-2">Engagement Media Sosial</dt>
+                <dd class="text-secondary">Strategi peningkatan interaksi dan jangkauan di platform media sosial</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
       </div>
 
-      <div class="text-center mt-12">
-        <Button tag="router-link" to="/services">
-          Lihat Semua Layanan
-        </Button>
+      <!-- CTA - minimal -->
+      <div class="mt-16 text-center">
+        <router-link
+          to="/services"
+          class="inline-flex items-center px-6 py-3 border-2 border-neutral-300 text-black font-semibold text-sm rounded-lg hover:border-black transition-all duration-150"
+        >
+          Lihat Detail Lengkap
+          <span class="ml-2">→</span>
+        </router-link>
       </div>
+
     </div>
   </section>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import Card from '../components/Card.vue'
-import Button from '../components/Button.vue'
 import { useStaggerReveal } from '../composables/useStaggerReveal'
 
 const servicesRef = ref(null)
-useStaggerReveal(servicesRef, { stagger: 0.2 })
+useStaggerReveal(servicesRef, { stagger: 0.1 })
 </script>

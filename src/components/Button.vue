@@ -16,7 +16,7 @@ const props = defineProps({
   variant: {
     type: String,
     default: 'primary',
-    validator: (value) => ['primary', 'outline', 'primary-light', 'outline-light'].includes(value)
+    validator: (value) => ['primary', 'outline', 'primary-light', 'outline-light', 'secondary'].includes(value)
   },
   tag: {
     type: String,
@@ -31,13 +31,14 @@ const props = defineProps({
 defineEmits(['click'])
 
 const buttonClasses = computed(() => {
-  const baseClasses = 'inline-block px-10 py-3.5 font-semibold text-[0.9375rem] rounded-lg transition-all duration-200 ease-out'
+  const baseClasses = 'inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base rounded-xl transition-all duration-200 ease-out relative overflow-hidden border-2'
   
   const variantClasses = {
-    primary: 'bg-black text-white shadow-md hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-xl',
-    outline: 'border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:-translate-y-1',
-    'primary-light': 'bg-white text-black shadow-md hover:bg-gray-50 hover:-translate-y-1 hover:shadow-xl',
-    'outline-light': 'border-2 border-white text-white bg-transparent hover:bg-white hover:text-black hover:-translate-y-1'
+    primary: 'bg-black border-black text-white shadow-[0_4px_14px_rgba(0,0,0,0.2)] hover:bg-[#171717] hover:border-[#171717] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.25)] active:translate-y-0 active:shadow-[0_2px_6px_rgba(0,0,0,0.2)]',
+    outline: 'border-black text-black bg-white hover:bg-black hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_14px_rgba(0,0,0,0.15)] active:translate-y-0',
+    'primary-light': 'bg-white border-white text-black shadow-[0_4px_14px_rgba(0,0,0,0.1)] hover:bg-neutral-50 hover:border-neutral-50 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.15)] active:translate-y-0 active:shadow-[0_2px_6px_rgba(0,0,0,0.1)]',
+    'outline-light': 'border-white text-white bg-transparent hover:bg-white hover:text-black hover:-translate-y-1 hover:shadow-[0_4px_14px_rgba(255,255,255,0.2)] active:translate-y-0',
+    secondary: 'border-neutral-300 text-black bg-white hover:border-black hover:bg-neutral-50 hover:-translate-y-1 hover:shadow-[0_4px_14px_rgba(0,0,0,0.1)] active:translate-y-0'
   }
   
   return `${baseClasses} ${variantClasses[props.variant]}`

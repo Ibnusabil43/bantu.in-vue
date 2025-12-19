@@ -16,11 +16,11 @@ const props = defineProps({
 })
 
 const cardClasses = computed(() => {
-  const baseClasses = 'rounded-xl p-8 border transition-all duration-200 ease-out'
+  const baseClasses = 'rounded-2xl p-9 border-2 transition-all duration-250 ease-out relative overflow-hidden'
   
   const variantClasses = {
-    light: 'bg-white border-gray-200 hover:-translate-y-2 hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.12)] hover:border-gray-300',
-    dark: 'bg-[#0a0a0a] border-[#262626] hover:-translate-y-2 hover:border-[#404040] hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.4)]'
+    light: 'bg-white border-neutral-200 shadow-[0_2px_8px_rgba(0,0,0,0.04),0_1px_3px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.05)] hover:border-neutral-300',
+    dark: 'bg-neutral-900 border-neutral-800 shadow-[0_2px_8px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:border-neutral-700 hover:shadow-[0_12px_32px_rgba(0,0,0,0.5),0_4px_12px_rgba(0,0,0,0.3)]'
   }
   
   return `${baseClasses} ${variantClasses[props.variant]}`
